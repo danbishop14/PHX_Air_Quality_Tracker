@@ -105,8 +105,8 @@ def plot_air_quality_metrics(df):
     default_index = unique_dates_str.index(next(date_str for date_str in unique_dates_str if "Today" in date_str))
     selected_date_str = st.selectbox('Select a day to view forecast', options=unique_dates_str, index=default_index)
 
-    # Ensure 'DATE' is of datetime type
-    df_plot_all['DATE'] = pd.to_datetime(df_plot_all['DATE'])
+    df_plot['DATE'] = pd.to_datetime(df_plot['DATE'])
+
 
     # Parse the selected date string to get the date
     selected_date = pd.to_datetime(datetime.strptime(selected_date_str.split(",")[1].strip().split(" ")[0], '%m/%d/%Y'))
