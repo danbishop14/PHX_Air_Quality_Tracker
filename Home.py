@@ -261,12 +261,11 @@ def main():
 
     summary_df = calculate_and_display_summary(df)
     st.write("## The Week Ahead:")
-    st.caption('This is a string that explains something above.')
     col1, col2 = st.columns([6,3])
     with col1:
         # Display the summary table
         st.dataframe(summary_df)
-        st.write("O3 = Ozone, PM10 = Particles ≤ 10 microns, PM2.5 = Particles ≤ 2.5 microns")
+        st.caption("O3 = Ozone, PM10 = Particles ≤ 10 microns, PM2.5 = Particles ≤ 2.5 microns")
     with col2:
         # Display the worst day warning
         display_worst_day_warning(df, pollutant_data)
