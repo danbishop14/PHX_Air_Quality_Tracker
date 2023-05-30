@@ -246,7 +246,7 @@ def display_worst_day_warning(df,pollutant_data):
 
 
 # Setting the Streamlit page configuration
-st.set_page_config(page_title="Air Quality Forecast", page_icon=":robot:",layout='wide')
+st.set_page_config(page_title="Air Quality Forecast", page_icon=":robot:",layout='center')
 st.write("# Phoenix Air Quality Forecast")
 
 if "generated_blog" not in st.session_state:
