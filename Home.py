@@ -107,6 +107,7 @@ def plot_air_quality_metrics(df):
     
     # Parse the selected date string to get the date
     selected_date = datetime.strptime(selected_date_str.split(",")[1].strip().split(" ")[0], '%m/%d/%Y').date()
+    selected_date = pd.to_datetime(selected_date)
 
     df_plot = df_plot[df_plot['DATE'] == selected_date]
 
