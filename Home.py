@@ -128,7 +128,8 @@ def plot_air_quality_metrics(df):
                 avg_24hr = df_plot[metric].mean()
 
                 # Calculate the weekly average and the percent change
-                weekly_avg = df_plot_all[df_plot_all['DATE'].between(selected_date - pd.DateOffset(weeks=1), selected_date - pd.DateOffset(days=1).to_pytimedelta())][metric].mean()
+                weekly_avg = df_plot_all[df_plot_all['DATE'].between(selected_date - pd.DateOffset(weeks=1), selected_date - pd.DateOffset(days=1))][metric].mean()
+
 
                 percent_change = (avg_24hr - weekly_avg) / weekly_avg * 100 if weekly_avg else 0
 
