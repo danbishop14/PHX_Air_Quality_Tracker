@@ -256,7 +256,7 @@ def main():
     conn = connect_to_snowflake()
     df = fetch_data(conn)
     timestamp = (df['RECORD_TIMESTAMP'].max()).strftime('%I:%M%p')
-    st.warning(f'Anticipate the effects of air pollutants on allergies & respiratory conditions for overall health and harness real-time air quality information to protect your well-being and plan your activities in Phoenix, Arizona.  \n\n Powered by [OpenWeatherMap](https://openweathermap.org/), [Snowflake](https://www.snowflake.com/en/), and [Streamlit](https://www.streamlit.com/).')
+    st.warning(f'Anticipate the effects of air pollutants on allergies and respiratory conditions to protect your overall health. Harness real-time air quality information to safeguard your well-being and plan your activities in Phoenix, Arizona.  \n\n Powered by [OpenWeatherMap](https://openweathermap.org/), [Snowflake](https://www.snowflake.com/en/), and [Streamlit](https://www.streamlit.com/).')
     st.write(f"Data updated: **{timestamp}**")
 
     summary_df = calculate_and_display_summary(df)
