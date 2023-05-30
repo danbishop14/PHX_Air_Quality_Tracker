@@ -240,7 +240,7 @@ def display_worst_day_warning(df,pollutant_data):
     # Find the day with the maximum average for each metric
     worst_days = daily_avg.idxmax()
 
-    st.markdown('Please note the following dates observed to have **worst air quality conditions** for specific pollutants:')
+    st.markdown('The following dates have the **worst air quality conditions** for each pollutant:')
     for metric, day in worst_days.items():
         st.markdown(f"**{pollutant_data[metric]['Pollutant']}**: {day.strftime('%A, %m/%d/%Y')}")
 
