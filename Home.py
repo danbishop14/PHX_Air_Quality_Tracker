@@ -261,7 +261,7 @@ def main():
 
     summary_df = calculate_and_display_summary(df)
     st.write("## The Week Ahead:")
-    col1, col2 = st.columns([6,3])
+    col1, col2 = st.columns([3,1])
     with col1:
         # Display the summary table
         st.dataframe(summary_df)
