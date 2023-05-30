@@ -3,6 +3,9 @@ The Phoenix Air Quality Forecast app is built using Streamlit, an open-source Py
 
 https://phxairqualityforecast.streamlit.app/
 
+![image](https://github.com/danbishop14/PHX_Air_Quality_Tracker/assets/69700884/b19dddd6-ff83-4127-b1d3-97fa41fccaac)
+
+
 ## Key Features
 - Real-time air quality information for Phoenix, Arizona
 - Visualizations of air quality metrics
