@@ -117,7 +117,8 @@ def plot_air_quality_metrics(df):
     selected_date = pd.to_datetime(datetime.strptime(selected_date_str.split(",")[1].strip().split(" ")[0], '%m/%d/%Y'))
 
     # Then compare
-    df_plot = df_plot[df_plot['DATE'].dt.date == selected_date.dt.date]
+    df_plot = df_plot[df_plot['DATE'].dt.normalize() == selected_date.normalize()]
+
 
 
 
