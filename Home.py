@@ -114,10 +114,11 @@ def plot_air_quality_metrics(df):
     df_plot['DATE'] = pd.to_datetime(df_plot['DATE'], errors='coerce')
 
     # Parse the selected date string to get the date
-    selected_date = datetime.strptime(selected_date_str.split(",")[1].strip().split(" ")[0], '%m/%d/%Y').date()
+    selected_date = pd.to_datetime(datetime.strptime(selected_date_str.split(",")[1].strip().split(" ")[0], '%m/%d/%Y'))
 
     # Then compare
-    df_plot = df_plot[df_plot['DATE'].dt.date == selected_date]
+    df_plot = df_plot[df_plot['DATE'].dt.date == selected_date.dt.date]
+
 
 
     if not df_plot.empty:
