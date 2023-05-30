@@ -6,4 +6,4 @@ plotly
 python-dotenv
 seaborn
 plotly
-datetimeg
+datetime
