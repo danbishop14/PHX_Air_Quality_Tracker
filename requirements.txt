@@ -3,3 +3,8 @@ streamlit
 snowflake-connector-python
 seaborn
 plotly
+python-dotenv
+os
+seaborn
+plotly
+datetime
